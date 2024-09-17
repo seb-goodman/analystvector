@@ -1,44 +1,29 @@
 import NextLogo from "./next-logo";
 import SupabaseLogo from "./supabase-logo";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <div className="flex flex-col gap-16 items-center">
-      <div className="flex gap-8 justify-center items-center">
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SupabaseLogo />
-        </a>
-        <span className="border-l rotate-45 h-6" />
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          <NextLogo />
-        </a>
-      </div>
       <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
       <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        The fastest way to build apps with{" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Supabase
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nextjs.org/"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Next.js
-        </a>
+        Empowering <strong>data-driven businesses</strong> with{" "}
+        <strong>AI-driven</strong> analyst insights
       </p>
-      <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
+      <a
+        href="https://www.resonancecrowd.com/"
+        target="_blank"
+        rel="noreferrer"
+        className="flex gap-2 mt-8 items-center text-m  text-gray-500 font-thin"
+      >
+        <p className="mr-4">An app by</p>
+        <Image
+          src="/resonance-logo.png"
+          alt="Resonance Logo"
+          width={160}
+          height={24}
+        />
+      </a>
     </div>
   );
 }
